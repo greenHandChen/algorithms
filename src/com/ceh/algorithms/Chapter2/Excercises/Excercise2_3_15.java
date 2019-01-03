@@ -4,23 +4,23 @@ package com.ceh.algorithms.Chapter2.Excercises;
  * Created by enHui.Chen on 2019/1/3.
  */
 
-import com.ceh.algorithms.utils.PrintUtil;
+import com.ceh.algorithms.utils.ArrayUtil;
 
 /**
  * @Author: enHui.Chen
- * @Description: 螺丝和螺帽的问题。
+ * @Description: 螺丝和螺帽的问题。取螺丝中的一个区分螺帽，将螺帽分成大堆和小堆，将匹配的螺帽去区分螺丝，将螺丝分成大堆小堆,
+ *               将螺丝大堆和螺帽大堆相匹配,小堆和小堆匹配
  * @Data 2019/1/3
  */
 public class Excercise2_3_15 {
     public static void main(String[] args) {
         // 螺丝
         int[] bolts = {5, 7, 6, 1, 3, 2, 9, 8, 4};
-        // 螺帽       3  4  2  1  5  7  8  6  9
+        // 螺帽
         int[] nuts = {1, 9, 5, 4, 8, 2, 7, 3, 6};
-        //3 4 2 1 5 7 8 6 9
         match(bolts, nuts);
-        PrintUtil.printIntArray(bolts);
-        PrintUtil.printIntArray(nuts);
+        ArrayUtil.printIntArray(bolts);
+        ArrayUtil.printIntArray(nuts);
     }
 
     private static void match(int[] bolts, int[] nuts) {
@@ -36,42 +36,17 @@ public class Excercise2_3_15 {
         match(bolts, nuts, n + 1, hi);// 匹配右侧
     }
 
-    private static int preSort(int val, int[] array, int lo, int hi) {
-        int lt = lo - 1, i = lo, gt = hi + 1;
-        if(lt < 0){
-            lt =lo;
+    private static int preSort(int pivot, int[] array, int lo, int hi) {
+        // lt记录比排定的pivot小的指针
+        int lt = lo, i = lo + 1;
+        while (i <= hi) {
+            // 将lt指针右移交换
+            if (array[i] < pivot) ArrayUtil.exchange(array, i, ++lt);
+            // 将相等对应的值挪到lo
+            else if (array[i] == pivot) ArrayUtil.exchange(array, i--, lo);
+            i++;
         }
-        int[] a = new int[array.length + 1];
-        a[lo] = val;
-        for (int k = lo; k <= hi; k++) {
-            a[k + 1] = array[k];
-        }
-        while (i <= gt) {
-            if (a[i] < val) exchange(a, lt++, i++);
-            else if (a[i] > val) exchange(a, gt--, i);
-            else i++;
-        }
-        for (int k = 1; k < a.length; k++) {
-            if (a[k - 1] == a[k]) a[k] = -1;
-        }
-        int[] c = new int[a.length - 1];
-        for (int k = 0, p = 0; p < a.length; k++, p++) {
-            if (a[p] == -1) {
-                k--;
-                continue;
-            }
-            c[k] = a[p];
-        }
-
-        for (int k = lo; k <= hi; k++) {
-            array[k] = c[k - lo];
-        }
+        ArrayUtil.exchange(array, lt, lo);
         return lt;
-    }
-
-    private static void exchange(int[] array, int i, int j) {
-        int tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
     }
 }

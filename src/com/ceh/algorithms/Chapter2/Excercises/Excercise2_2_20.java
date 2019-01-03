@@ -4,7 +4,7 @@ package com.ceh.algorithms.Chapter2.Excercises;
  * Created by enHui.Chen on 2019/1/1.
  */
 
-import com.ceh.algorithms.utils.PrintUtil;
+import com.ceh.algorithms.utils.ArrayUtil;
 
 /**
  * @Author: enHui.Chen
@@ -15,7 +15,7 @@ public class Excercise2_2_20 {
     public static void main(String[] args) {
         int[] array = {5, 6, 7, 66, 22, 222, 67, 1, 18, 100, 99, 88, 42, 49, 56, 45, 76, 65, 0};
         int[] index = IndirectMerge.sort(array);
-        PrintUtil.printIntArray(index);
+        ArrayUtil.printIntArray(index);
     }
 }
 

@@ -3,7 +3,7 @@ package com.ceh.algorithms.utils;
 /**
  * Created by enHui.Chen on 2019/1/2.
  */
-public class PrintUtil {
+public class ArrayUtil {
 
     public static void printIntArray(int[] array) {
         System.out.print("[");
@@ -14,6 +14,12 @@ public class PrintUtil {
             }
             System.out.print(array[i] + ",");
         }
+    }
+
+    public static void exchange(int[] array, int i, int j) {
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
     }
 
 }
