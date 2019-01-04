@@ -1,13 +1,8 @@
 package com.ceh.algorithms.Chapter2.Excercises;
 
 /**
- * Created by enHui.Chen on 2019/1/1.
- */
-
-/**
  * @Author: enHui.Chen
  * @Description: 快速归并,去除了内循环的条件
- * @Data 2019/1/1
  */
 public class Excercise2_2_10 {
     private static void merge(int[] arrayux, int[] array, int lo, int mid, int hi) {

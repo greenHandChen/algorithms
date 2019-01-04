@@ -1,15 +1,10 @@
 package com.ceh.algorithms.Chapter2.Excercises;
 
-/**
- * Created by enHui.Chen on 2018/12/31.
- */
-
 import com.ceh.algorithms.utils.ArrayUtil;
 
 /**
  * @Author: enHui.Chen
  * @Description: 修改归并排序时:将静态成员变量的辅助数组改为由参数传递的辅助数组
- * @Data 2018/12/31
  */
 public class Excercise2_2_9 {
     public static void main(String[] args) {

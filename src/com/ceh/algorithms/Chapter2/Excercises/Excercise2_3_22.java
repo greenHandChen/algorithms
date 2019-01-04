@@ -2,13 +2,9 @@ package com.ceh.algorithms.Chapter2.Excercises;
 
 import com.ceh.algorithms.utils.ArrayUtil;
 
-/**
- * Created by enHui.Chen on 2019/1/3.
- */
  /**
    * @Author: enHui.Chen
    * @Description: 快速三向切分。1.左右两端与给定值相等 2.找完相等将左右两侧汇聚中中部 3.重复1,2
-   * @Data 2019/1/4
    */
 public class Excercise2_3_22 {
     public static void main(String[] args) {

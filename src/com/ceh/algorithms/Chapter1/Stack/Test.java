@@ -1,8 +1,5 @@
 package com.ceh.algorithms.Chapter1.Stack;
 
-/**
- * Created by enHui.Chen on 2018/12/30.
- */
 public class Test {
     public static void main(String[] args) {
         stackArrayTest();

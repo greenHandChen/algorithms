@@ -2,13 +2,9 @@ package com.ceh.algorithms.Chapter1.Excercises;
 
 import java.util.Scanner;
 
-/**
- * Created by enHui.Chen on 2019/1/1.
- */
  /**
    * @Author: enHui.Chen
    * @Description: 返回指定元素的最小索引
-   * @Data 2019/1/1
    */
 public class Excercise1_4_10 {
 

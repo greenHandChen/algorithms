@@ -1,9 +1,5 @@
 package com.ceh.algorithms.Chapter1.Excercises;
 
-/**
- * Created by enHui.Chen on 2019/1/1.
- */
-
 import com.ceh.algorithms.Chapter1.BinarySearch.BinarySearch;
 
 import java.util.Scanner;
@@ -11,7 +7,6 @@ import java.util.Scanner;
 /**
  * @Author: enHui.Chen
  * @Description: 双调查找
- * @Data 2019/1/1
  */
 public class Excercise1_4_20 {
     public static void main(String[] args) {

@@ -2,9 +2,6 @@ package com.ceh.algorithms.Chapter1.Stack;
 
 import java.util.Iterator;
 
-/**
- * Created by enHui.Chen on 2018/12/30.
- */
 public class StackArray<T> implements Iterable<T> {
     private Object[] array;
     private int size = 0;

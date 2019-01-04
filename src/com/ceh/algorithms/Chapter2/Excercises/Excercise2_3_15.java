@@ -1,16 +1,11 @@
 package com.ceh.algorithms.Chapter2.Excercises;
 
-/**
- * Created by enHui.Chen on 2019/1/3.
- */
-
 import com.ceh.algorithms.utils.ArrayUtil;
 
 /**
  * @Author: enHui.Chen
  * @Description: 螺丝和螺帽的问题。取螺丝中的一个区分螺帽，将螺帽分成大堆和小堆，将匹配的螺帽去区分螺丝，将螺丝分成大堆小堆,
  *               将螺丝大堆和螺帽大堆相匹配,小堆和小堆匹配
- * @Data 2019/1/3
  */
 public class Excercise2_3_15 {
     public static void main(String[] args) {

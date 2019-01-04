@@ -2,9 +2,6 @@ package com.ceh.algorithms.Chapter1.Queue;
 
 import java.util.Iterator;
 
-/**
- * Created by enHui.Chen on 2018/12/30.
- */
 public class Queue<T> implements Iterable<T> {
     private Node first;
     private Node last;

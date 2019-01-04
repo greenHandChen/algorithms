@@ -1,8 +1,5 @@
 package com.ceh.algorithms.Chapter1.Stack;
 
-/**
- * Created by enHui.Chen on 2018/12/30.
- */
 public class Stack<T> {
     private Node first;
     private int modCount;

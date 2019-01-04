@@ -9,7 +9,6 @@ import com.ceh.algorithms.utils.ArrayUtil;
 /**
  * @Author: enHui.Chen
  * @Description: 间接排序(元素索引排序), 返回的数组是按从小到大排序的原数组中元素的索引位
- * @Data 2019/1/1
  */
 public class Excercise2_2_20 {
     public static void main(String[] args) {

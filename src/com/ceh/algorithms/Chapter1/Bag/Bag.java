@@ -2,9 +2,7 @@ package com.ceh.algorithms.Chapter1.Bag;
 
 import java.util.Iterator;
 
-/**
- * Created by enHui.Chen on 2018/12/30.
- */
+
 public class Bag<T> implements Iterable<T> {
     private Node first;
 

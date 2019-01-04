@@ -1,15 +1,10 @@
 package com.ceh.algorithms.Chapter2.Excercises;
 
-/**
- * Created by enHui.Chen on 2019/1/1.
- */
-
 import com.ceh.algorithms.utils.ArrayUtil;
 
 /**
  * @Author: enHui.Chen
  * @Description: 归并+插入
- * @Data 2019/1/1
  */
 public class Excercise2_2_11 {
     public static void main(String[] args) {
