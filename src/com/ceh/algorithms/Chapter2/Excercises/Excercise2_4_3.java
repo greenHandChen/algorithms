@@ -70,7 +70,11 @@ class MaxPQ {
     private int N = 0;
 
     public MaxPQ() {
-        array = new int[1 + 16];
+        this(16);
+    }
+
+    public MaxPQ(int size) {
+        array = new int[1 + size];
     }
 
     public void insert(int e) {
@@ -100,6 +104,10 @@ class MaxPQ {
             ArrayUtil.exchange(array, j, k);
             k = j;
         }
+    }
+
+    public int getSize() {
+        return this.N;
     }
 }
 

@@ -100,7 +100,7 @@ class MinPQ<T> {
     }
 
     public int getSize() {
-        return N;
+        return this.N;
     }
 
     private int compare(Object x, Object y) {

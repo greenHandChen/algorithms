@@ -24,7 +24,7 @@ public class Excercise2_4_25 {
     }
 }
 
-class CubeSum implements Comparable<CubeSum> {
+class  CubeSum implements Comparable<CubeSum> {
     private long sum;
     private long i;
     private long j;
