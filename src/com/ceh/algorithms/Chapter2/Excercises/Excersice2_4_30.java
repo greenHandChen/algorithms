@@ -14,7 +14,8 @@ public class Excersice2_4_30 {
         mediumPQ.insert(2);
         mediumPQ.insert(1);
         mediumPQ.insert(8);
-        System.out.println(mediumPQ.getMedium());
+        System.out.println(mediumPQ.delMedium());
+        System.out.println(mediumPQ.delMedium());
     }
 }
 
@@ -40,7 +41,6 @@ class MediumPQ {
         // 先插入再调整
         if (isEmpty()) {
             medium = e;
-            maxPQ.insert(e);
             N++;
             return;
         }
@@ -51,18 +51,22 @@ class MediumPQ {
     }
 
     public int delMedium() {
-
-        return medium;
+        if (isEmpty()) return -1;
+        int oldMedium = medium;
+        if (maxPQ.getSize() >= minPQ.getSize()) medium = maxPQ.delMax();
+        else medium = (int) minPQ.delMin();
+        N--;
+        return oldMedium;
     }
 
     public void calMedium() {
         while (minPQ.getSize() - maxPQ.getSize() > 1) {
-            maxPQ.insert((int) minPQ.delMin());
-            medium = maxPQ.delMax();
+            maxPQ.insert(medium);
+            medium = (int) minPQ.delMin();
         }
         while (maxPQ.getSize() - minPQ.getSize() > 1) {
-            minPQ.insert(maxPQ.delMax());
-            medium = (int) minPQ.delMin();
+            minPQ.insert(medium);
+            medium = maxPQ.delMax();
         }
     }
 
