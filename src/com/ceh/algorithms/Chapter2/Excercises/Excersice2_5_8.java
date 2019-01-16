@@ -1,7 +1,8 @@
 package com.ceh.algorithms.Chapter2.Excercises;
 
+import org.junit.Test;
+
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  * @Author: enHui.Chen
@@ -9,33 +10,31 @@ import java.util.Scanner;
  */
 public class Excersice2_5_8 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            String[] str = scanner.nextLine().split(",");
-            int count = 1;
-            int j = 0;
-            String word = str[0];
-            CountWord[] cws = new CountWord[str.length];
-            Arrays.sort(str);
-            for (int i = 1; i < str.length; i++, count++) {
-                if (!str[i].equals(word)) {
-                    cws[j++] = new CountWord(count, word);
-                    word = str[i];
-                    count = 0;
-                }
+    @Test
+    public void countTest() {
+        String[] str = {"12", "12", "aa", "bb", "cc", "12", "cc", "bb", "11", "12"};
+        int count = 1;
+        int j = 0;
+        String word = str[0];
+        CountWord[] cws = new CountWord[str.length];
+        Arrays.sort(str);
+        for (int i = 1; i < str.length; i++, count++) {
+            if (!str[i].equals(word)) {
+                cws[j++] = new CountWord(count, word);
+                word = str[i];
+                count = 0;
             }
-            // 对最后一个元素特殊处理
-            cws[j] = new CountWord(count, word);
-            Arrays.sort(cws, (o1, o2) -> {
-                if (o1 == null || o2 == null || o1.getCount() > o2.getCount()) return -1;
-                if (o1.getCount() < o2.getCount()) return 1;
-                else return 0;
-            });
-            for (int i = 0; i < cws.length; i++) {
-                if (cws[i] == null) continue;
-                System.out.println(cws[i]);
-            }
+        }
+        // 对最后一个元素特殊处理
+        cws[j] = new CountWord(count, word);
+        Arrays.sort(cws, (o1, o2) -> {
+            if (o1 == null || o2 == null || o1.getCount() > o2.getCount()) return -1;
+            if (o1.getCount() < o2.getCount()) return 1;
+            else return 0;
+        });
+        for (int i = 0; i < cws.length; i++) {
+            if (cws[i] == null) continue;
+            System.out.println(cws[i]);
         }
     }
 }
