@@ -1,4 +1,4 @@
-package com.ceh.algorithms.Chapter2.Excercises.Excercise2_5_27;
+package com.ceh.algorithms.Chapter3.Excercise.Excercise2_5_27;
 
 import com.ceh.algorithms.utils.ArrayUtil;
 import org.junit.Test;

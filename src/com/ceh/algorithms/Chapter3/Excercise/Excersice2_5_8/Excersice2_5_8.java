@@ -1,4 +1,4 @@
-package com.ceh.algorithms.Chapter2.Excercises;
+package com.ceh.algorithms.Chapter3.Excercise.Excersice2_5_8;
 
 import org.junit.Test;
 
@@ -36,39 +36,5 @@ public class Excersice2_5_8 {
             if (cws[i] == null) continue;
             System.out.println(cws[i]);
         }
-    }
-}
-
-class CountWord {
-    private int count;
-    private String word;
-
-    public CountWord(int count, String word) {
-        this.count = count;
-        this.word = word;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public String getWord() {
-        return word;
-    }
-
-    public void setWord(String word) {
-        this.word = word;
-    }
-
-    @Override
-    public String toString() {
-        return "CountWord{" +
-                "count=" + count +
-                ", word='" + word + '\'' +
-                '}';
     }
 }

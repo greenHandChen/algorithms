@@ -1,4 +1,4 @@
-package com.ceh.algorithms.Chapter2.Excercises.Excercise2_5_24;
+package com.ceh.algorithms.Chapter3.Excercise.Excercise2_5_24;
 
 
 /**

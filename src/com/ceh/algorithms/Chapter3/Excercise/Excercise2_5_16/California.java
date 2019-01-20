@@ -1,34 +1,12 @@
-package com.ceh.algorithms.Chapter2.Excercises;
+package com.ceh.algorithms.Chapter3.Excercise.Excercise2_5_16;
 
-import org.junit.Test;
-
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: enHui.Chen
- * @Description: 公平的选举:按照设定的字母顺序,将给定的字符串排序
+ * Created by enHui.Chen on 2019/1/20.
  */
-public class Excercise2_5_16 {
-
-    @Test
-    public void californiaTest() {
-        California[] californias = new California[5];
-        californias[0] = new California("razbbb");
-        californias[1] = new California("aazzzz");
-        californias[2] = new California("bazzzz");
-        californias[3] = new California("cccuioph");
-        californias[4] = new California("raz");
-        Arrays.sort(californias);
-        for (California california : californias) {
-            System.out.println(california.getStr());
-        }
-
-    }
-}
-
-class California implements Comparable<California> {
+public class California implements Comparable<California> {
     private static final Map<String, Integer> WORD_ORDER = new HashMap<>();
     private String str;
 
@@ -85,3 +63,4 @@ class California implements Comparable<California> {
         this.str = str;
     }
 }
+
